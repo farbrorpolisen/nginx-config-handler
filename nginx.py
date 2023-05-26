@@ -4,6 +4,8 @@ Python library for editing NGINX serverblocks.
 python-nginx
 (c) 2016 Jacob Cook
 Licensed under GPLv3, see LICENSE.md
+
+Modified by farbrorpolisen in 2023.
 """
 
 import re
@@ -90,6 +92,14 @@ class Conf(object):
     def servers(self):
         """Return a list of child Server objects."""
         return [x for x in self.children if isinstance(x, Server)]
+
+    @property
+    def upstreams(self):
+        return [x for x in self.children if isinstance(x, Upstream)]
+
+    @property
+    def upstream(self):
+        return self.upstreams[0]
 
     @property
     def server(self):
