@@ -1,11 +1,10 @@
 """
 Python library for editing NGINX serverblocks.
 
-python-nginx
-(c) 2016 Jacob Cook
+python-nginx (c) 2016 Jacob Cook ;  Modified by farbrorpolisen in 2023.
+
 Licensed under GPLv3, see LICENSE.md
 
-Modified by farbrorpolisen in 2023.
 """
 
 import re
